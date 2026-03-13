@@ -1,0 +1,29 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtualenvs
+.venv/
+.venv_fix/
+execution/.venv/
+execution/.venv_fix/
+
+# Secrets
+.env
+execution/.env
+
+# Runtime data
+execution/data/uploads/
+execution/data/reports/
+execution/data/storage.json
+execution/data/pipeline_audit.jsonl
+execution/bot_stdout.log
+execution/bot_stderr.log
+
+# Temporary
+*.log
+tmp_test.txt
+tender_tmp/
+
+execution/execution/

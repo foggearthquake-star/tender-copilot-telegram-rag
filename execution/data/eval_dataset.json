@@ -1,0 +1,65 @@
+﻿[
+  {
+    "name": "high_budget_blocker",
+    "profile": {
+      "company_name": "ООО Вектор",
+      "categories": ["it"],
+      "regions": ["Россия"],
+      "max_contract_value_rub": 1000000,
+      "min_margin_percent": 15,
+      "required_certificates": [],
+      "stop_factors": []
+    },
+    "facts": {
+      "contract_value_rub": 5000000,
+      "deadline": "2026-07-10",
+      "required_certificates": [],
+      "regions": ["Россия"],
+      "payment_terms": "аванс 30%",
+      "obligations": []
+    },
+    "expected_status": "NO_GO"
+  },
+  {
+    "name": "missing_deadline_review",
+    "profile": {
+      "company_name": "ООО Вектор",
+      "categories": ["it"],
+      "regions": ["Россия"],
+      "max_contract_value_rub": 10000000,
+      "min_margin_percent": 15,
+      "required_certificates": [],
+      "stop_factors": []
+    },
+    "facts": {
+      "contract_value_rub": 700000,
+      "deadline": null,
+      "required_certificates": [],
+      "regions": ["Россия"],
+      "payment_terms": null,
+      "obligations": []
+    },
+    "expected_status": "REVIEW"
+  },
+  {
+    "name": "clean_go",
+    "profile": {
+      "company_name": "ООО Вектор",
+      "categories": ["it"],
+      "regions": ["Россия"],
+      "max_contract_value_rub": 10000000,
+      "min_margin_percent": 15,
+      "required_certificates": ["лицензия"],
+      "stop_factors": ["постоплата 120"]
+    },
+    "facts": {
+      "contract_value_rub": 900000,
+      "deadline": "2026-07-01",
+      "required_certificates": ["лицензия"],
+      "regions": ["Россия"],
+      "payment_terms": "аванс 40%",
+      "obligations": ["гарантия"]
+    },
+    "expected_status": "GO"
+  }
+]
