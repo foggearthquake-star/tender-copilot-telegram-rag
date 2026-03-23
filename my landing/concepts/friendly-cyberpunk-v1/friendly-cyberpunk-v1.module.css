@@ -1,0 +1,387 @@
+.scene {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px 0 80px;
+  background:
+    radial-gradient(circle at 15% 12%, rgba(136, 255, 181, 0.24), transparent 20%),
+    radial-gradient(circle at 82% 18%, rgba(171, 255, 215, 0.16), transparent 22%),
+    linear-gradient(180deg, #07140f 0%, #0c241a 52%, #102d20 100%);
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(183, 255, 210, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(183, 255, 210, 0.04) 1px, transparent 1px);
+  background-size: 14px 14px;
+  opacity: 0.55;
+}
+
+.header,
+.hero,
+.block,
+.contactBlock,
+.ribbon {
+  width: min(calc(100% - 28px), 1220px);
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 12px;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 18px;
+  border: 1px solid rgba(183, 255, 210, 0.16);
+  border-radius: 28px;
+  background: rgba(8, 24, 17, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: grid;
+}
+
+.brandMain,
+.hero h1,
+.blockHeader h2,
+.contactCopy h2,
+.serviceCard h3,
+.proofCard h3 {
+  font-family: var(--font-display), serif;
+}
+
+.brandMain {
+  font-size: 2rem;
+  line-height: 0.9;
+  letter-spacing: 0.1em;
+  color: #e8fff0;
+}
+
+.brandSub,
+.kicker,
+.pixelTag,
+.serviceCard span,
+.processCard span {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.74rem;
+  color: #aaffc8;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav a,
+.heroText,
+.signalCard,
+.serviceCard p,
+.proofCard p,
+.processCard p,
+.faqItem p,
+.contactCopy p,
+.contactHint {
+  color: rgba(232, 255, 240, 0.78);
+}
+
+.telegramButton,
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.telegramButton,
+.secondaryButton {
+  border: 1px solid rgba(183, 255, 210, 0.18);
+  background: rgba(10, 34, 23, 0.86);
+}
+
+.primaryButton {
+  background: linear-gradient(180deg, #d9ffe6 0%, #9cffbc 100%);
+  color: #123321;
+  box-shadow: 0 12px 34px rgba(104, 255, 156, 0.26);
+}
+
+.hero,
+.block,
+.contactBlock {
+  display: grid;
+  gap: 26px;
+  margin-top: 18px;
+  padding: 30px;
+  border: 1px solid rgba(183, 255, 210, 0.16);
+  border-radius: 34px;
+  background:
+    linear-gradient(180deg, rgba(14, 42, 30, 0.88), rgba(10, 28, 20, 0.92)),
+    radial-gradient(circle at top left, rgba(183, 255, 210, 0.1), transparent 35%);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+}
+
+.hero {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.94fr);
+  min-height: calc(100svh - 118px);
+}
+
+.heroCopy,
+.contactCopy {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+.hero h1,
+.blockHeader h2,
+.contactCopy h2 {
+  margin: 0;
+  font-size: clamp(2.8rem, 6.6vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.heroText {
+  max-width: 620px;
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.8;
+}
+
+.heroActions,
+.signalGrid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.signalGrid {
+  margin-top: 8px;
+}
+
+.signalCard,
+.serviceCard,
+.proofCard,
+.processCard,
+.faqItem,
+.formWrap {
+  position: relative;
+  border: 1px solid rgba(183, 255, 210, 0.14);
+  border-radius: 24px;
+  background: rgba(14, 39, 28, 0.76);
+  overflow: hidden;
+}
+
+.signalCard,
+.serviceCard,
+.proofCard,
+.processCard,
+.faqItem,
+.formWrap {
+  padding: 20px;
+}
+
+.signalCard::before,
+.serviceCard::before,
+.proofCard::before,
+.processCard::before,
+.faqItem::before,
+.formWrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(183, 255, 210, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(183, 255, 210, 0.08) 1px, transparent 1px);
+  background-size: 10px 10px;
+  mask-image: linear-gradient(135deg, black 25%, transparent 100%);
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 620px;
+}
+
+.avatarWrap {
+  position: relative;
+  height: 100%;
+  border-radius: 34px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, rgba(183, 255, 210, 0.2), transparent 42%),
+    linear-gradient(180deg, rgba(18, 48, 35, 0.84), rgba(10, 28, 20, 0.84));
+  border: 1px solid rgba(183, 255, 210, 0.16);
+}
+
+.pixelTag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(183, 255, 210, 0.12);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.moonWrap {
+  position: absolute;
+  right: 18px;
+  bottom: 22px;
+  width: 156px;
+  aspect-ratio: 1;
+  padding: 12px;
+  border-radius: 28px;
+  background: rgba(10, 27, 19, 0.76);
+  border: 1px solid rgba(183, 255, 210, 0.18);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.moon {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.ribbon {
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(183, 255, 210, 0.16);
+  border-radius: 24px;
+  background: rgba(10, 31, 22, 0.84);
+}
+
+.ribbon div {
+  display: flex;
+  gap: 24px;
+  padding: 14px 20px;
+  white-space: nowrap;
+  color: #b7ffd2;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  animation: ribbon 18s linear infinite;
+}
+
+.blockHeader {
+  display: grid;
+  gap: 12px;
+  max-width: 880px;
+}
+
+.blockHeader h2,
+.contactCopy h2 {
+  font-size: clamp(2.2rem, 4.8vw, 4.1rem);
+}
+
+.serviceGrid,
+.proofGrid,
+.processGrid,
+.faqStack {
+  display: grid;
+  gap: 16px;
+}
+
+.serviceGrid,
+.proofGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.processGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.serviceCard h3,
+.proofCard h3 {
+  margin: 10px 0 0;
+  font-size: clamp(1.55rem, 2.5vw, 2.1rem);
+}
+
+.contactBlock {
+  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 1.08fr);
+}
+
+.contactHint {
+  padding: 14px 16px;
+  border: 1px solid rgba(183, 255, 210, 0.14);
+  border-radius: 20px;
+  background: rgba(12, 34, 24, 0.72);
+}
+
+.formWrap :global(.lead-form) {
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+@keyframes ribbon {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-20%);
+  }
+}
+
+@media (max-width: 1120px) {
+  .hero,
+  .contactBlock,
+  .serviceGrid,
+  .proofGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .heroVisual {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 760px) {
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .hero,
+  .block,
+  .contactBlock {
+    padding: 22px;
+  }
+
+  .hero h1,
+  .blockHeader h2,
+  .contactCopy h2 {
+    font-size: clamp(2.2rem, 12vw, 3.9rem);
+  }
+
+  .moonWrap {
+    width: 118px;
+  }
+}
